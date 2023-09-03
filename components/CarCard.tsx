@@ -17,7 +17,7 @@ const CarCard = ({ car }: CarCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="car-card group">
+    <div className="car-card group card-shadow">
       <div className="car-card__content">
         <h2 className="car-card__content-title">
           {make} {model}
@@ -26,7 +26,9 @@ const CarCard = ({ car }: CarCardProps) => {
       <p className="flex mt-6 text-[32px] font-extrabold">
         <span className="self-start text-[14px] font-semibold">$</span>
         {carRent}
-        <span className="self-end text-[14px] font-medium">/day</span>
+        <span className="self-end text-[16px] font-bold text-amber-600">
+          /day
+        </span>
       </p>
       <div className="relative w-full h-40 my-3 object-contain">
         <Image
@@ -64,7 +66,7 @@ const CarCard = ({ car }: CarCardProps) => {
         <div className="car-card__btn-container">
           <CustomButton
             title="View More"
-            containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
+            containerStyles="w-full py-[16px] rounded-full bg-orange-500"
             textStyles="text-white text-[14px] leading-[17px] font-bold"
             rightIcon="/right-arrow.svg"
             handleClick={() => setIsOpen(true)}

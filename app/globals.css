@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,12 +10,21 @@
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
 }
+body {
+  background-color: #efefefdc;
+}
 
 /* START: General styles */
+
 .max-width {
   @apply max-w-[1440px] mx-auto;
 }
-
+.hero-bg {
+  background-image: url("../public/world-map.svg");
+}
+.card-shadow {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
 .padding-x {
   @apply sm:px-16 px-6;
 }
@@ -43,11 +52,11 @@
 }
 
 .hero__title {
-  @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold;
+  @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-medium;
 }
 
 .hero__subtitle {
-  @apply text-[27px] text-black-100 font-light mt-5;
+  @apply text-[20px] text-black-100 font-semibold mt-5;
 }
 
 .hero__image-container {
@@ -60,6 +69,9 @@
 
 .hero__image-overlay {
   @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
+}
+.hero__image-overlay-2 {
+  @apply absolute xl:top-[30rem] xl:right-[15rem] top-[5rem] bg-worldmap bg-no-repeat -z-20 w-full xl:h-screen h-[590px] overflow-hidden;
 }
 /* END: Hero styles */
 
@@ -88,7 +100,7 @@
 
 /* START: Car Card styles */
 .car-card {
-  @apply flex flex-col p-6 justify-center items-start text-black-100 bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-3xl;
+  @apply flex border-amber-600 border-2 flex-col p-6 justify-center items-start text-black-100 bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-3xl;
 }
 
 .car-card__content {
@@ -96,7 +108,7 @@
 }
 
 .car-card__content-title {
-  @apply text-[22px] leading-[26px] font-bold capitalize;
+  @apply text-[25px] leading-[26px] font-bold capitalize;
 }
 
 .car-card__price {
